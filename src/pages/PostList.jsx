@@ -18,6 +18,10 @@ const PostList = () => {
             .then(res => {
                 setArray(res.data)
             })
+            .catch(err => {
+                console.error(err)
+                alert('error, change the URL');
+            });
     };
 
     useEffect(takePost, []);
