@@ -9,10 +9,8 @@ const AboutUs = () => {
     }, [])
 
     return <div>
-
         <header>Header AboutUs</header>
         <h1>About</h1>
-
     </div>
 
 

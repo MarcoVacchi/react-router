@@ -10,9 +10,19 @@ const PostList = () => {
 
     return <div>
 
-        <header>Header PostList</header>
-        <h1>PostList</h1>
-
+        <header>
+            <h1>PostList</h1>
+        </header>
+        <main>
+            <ol>
+                <li>post</li>
+                <li>post</li>
+                <li>post</li>
+                <li>post</li>
+                <li>post</li>
+                <li>post</li>
+            </ol>
+        </main>
     </div>
 }
 export default PostList;
