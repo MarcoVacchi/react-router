@@ -1,4 +1,5 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const PostList = () => {
     useEffect(() => {
@@ -8,21 +9,36 @@ const PostList = () => {
         }
     }, [])
 
-    return <div>
+    const endPoint = ('https://jsonplaceholder.typicode.com/posts');
+    const [array, setArray] = useState([]);
+
+
+    function takePost() {
+        axios.get(endPoint)
+            .then(res => {
+                setArray(res.data)
+            })
+    };
+
+    useEffect(takePost, []);
+    console.log(array);
+
+    return <div className="container">
 
         <header>
-            <h1>PostList</h1>
+            <h1 className="text-center">PostList</h1>
         </header>
         <main>
-            <ol>
-                <li>post</li>
-                <li>post</li>
-                <li>post</li>
-                <li>post</li>
-                <li>post</li>
-                <li>post</li>
+            <ol className="list-group list-group-numbered">
+                {array.map(({ id, title, body }) => (
+                    <div key={id} className="container">
+                        <li className="list-group-item p-2 bg-secondary list-style-none"><h2>Title: {title}</h2></li>
+                        <li className="list-group-item p-2 bg-secondary fw-bold list-style-none">{body}</li>
+                    </div>
+                ))}
             </ol>
         </main>
     </div>
 }
 export default PostList;
+

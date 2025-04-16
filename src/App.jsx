@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
 import PostList from './pages/PostList';
-import NavBar from './component/NavBar';
+import NavBar from './layouts/NavBar';
 
 function App() {
 
@@ -23,6 +23,4 @@ function App() {
 }
 
 export default App
-
-
 
