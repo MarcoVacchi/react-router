@@ -1,5 +1,4 @@
 import { useEffect } from "react"
-
 const HomePage = () => {
     useEffect(() => {
         console.log('mount pagina homepage');
@@ -11,7 +10,6 @@ const HomePage = () => {
     return <div>
         <h1>HomePage</h1>
     </div>
-
 
 }
 export default HomePage;
