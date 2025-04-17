@@ -38,7 +38,8 @@ const PostList = () => {
                 {array.map(({ id, title, body }) => (
                     <div key={id} className="container">
                         <li className="list-group-item p-2 bg-secondary list-style-none"><h2>Title: {title}</h2></li>
-                        <Link to={`/posts/${id}`} className="text-black text-decoration-none"><p>{body}</p></Link>
+
+                        <Link to={`/posts/${id}`} className="text-black text-decoration-none mb-3 mt-3">Maggiori informazioni</Link>
                     </div>
                 ))}
             </ol>
