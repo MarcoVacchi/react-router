@@ -9,9 +9,7 @@ const HomePage = () => {
     }, [])
 
     return <div>
-        <header>Header</header>
-        <h1>Home Page</h1>
-
+        <h1>HomePage</h1>
     </div>
 
 

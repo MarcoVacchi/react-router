@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
 import PostList from './pages/PostList';
-import NavBar from './layouts/NavBar';
+import DefaultLayout from './layouts/DefaultLayout';
 
 function App() {
 
@@ -11,13 +11,15 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<NavBar />}>
+
+          <Route element={<DefaultLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/post" element={<PostList />} />
           </Route>
+
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter >
     </>
   )
 }
